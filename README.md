@@ -57,7 +57,16 @@ Quizly is a full-stack web application designed for creating, managing, and taki
    ```bash
    npm install
    ```
-2. Configure environment variables (MongoDB URI, JWT secret, etc.).
+2. Configure environment variables:
+   - Create a `.env` file in the `Quizly-Backend` directory with the following example variables:
+     ```env
+     MONGO_URI=your_mongodb_connection_string
+     JWT_SECRET=your_jwt_secret
+     PORT=5000
+     GROQ_API_KEY=your_groq_api_key # If using Groq AI integration
+     ```
+   - You may add other variables as needed for third-party integrations or custom features.
+   - Never commit your `.env` file to version control.
 3. Start the server:
    ```bash
    npm run dev
@@ -69,7 +78,12 @@ Quizly is a full-stack web application designed for creating, managing, and taki
    ```bash
    npm install
    ```
-2. Start the development server:
+2. (Optional) If you use environment variables in the frontend, create a `.env` file in the `Quizly-Frontend` directory. Example:
+   ```env
+   VITE_API_URL=http://localhost:5000
+   ```
+   - Prefix all frontend environment variables with `VITE_`.
+3. Start the development server:
    ```bash
    npm run dev
    ```
