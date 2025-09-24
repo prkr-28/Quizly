@@ -21,7 +21,7 @@ export type ConfigValue = {
 export const CONFIG: ConfigValue = {
   appName: 'Study Sync',
   appVersion: packageJson.version,
-  serverUrl: 'http://localhost:4000/api',
+  serverUrl: 'https://quizly-1.onrender.com/api',
   assetsDir: '/assets',
   auth: {
     method: 'jwt',

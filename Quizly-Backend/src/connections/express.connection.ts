@@ -49,7 +49,7 @@ export default class ExpressConnection {
     this.app.use(helmet());
     this.app.use(morgan('dev'));
     this.app.use(bodyParser.json({ limit: '30mb' }));
-    this.app.use(cors({ origin: 'http://localhost:8081', credentials: true }));
+    this.app.use(cors({ origin: 'https://quizly-eight.vercel.app', credentials: true }));
     this.app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
   }
 
