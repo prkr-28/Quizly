@@ -10,7 +10,7 @@ const mongoose = new mongooseConnection();
 mongoose
   .connect()
   .then(() => {
-    app.start(Number(process.env.PORT));
+    app.start(Number(process.env.PORT||4000));
   })
   .catch((error) => {
     console.log(error);
